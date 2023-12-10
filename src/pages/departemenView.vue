@@ -1,7 +1,7 @@
 <template>
     <Navbar/>
     <departemen/>
-    <footer/>
+    <Footer/>
 </template>
 
 <script>
@@ -10,7 +10,7 @@
     import Footer from '../components/Footer.vue';
 
     export default {
+    components: { Navbar, departemen, Footer },
     name: 'departemenView',
-    components: { Navbar, departemen, Footer }
     }
 </script>
