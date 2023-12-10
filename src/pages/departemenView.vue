@@ -1,7 +1,9 @@
 <template>
     <Navbar/>
-    <departemen/>
-    <footer/>
+    <div>
+        <departemen/>
+    </div>
+    <Footer/>
 </template>
 
 <script>
