@@ -13,7 +13,7 @@ const router = createRouter({
     },
     {
       path :"/dharma",
-      name: "darma",
+      name: "dharma",
       component: DharmaView
     },
     {

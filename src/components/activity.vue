@@ -10,13 +10,13 @@
                     <div class="text-center text-[#063D63] text-[15px] font-semibold">DEPARTEMEN</div>
                 </router-link> 
 
-                <div class="w-[170px] h-[120.75px] pl-[7px] pr-1.5 flex-col justify-center items-center gap-[12.75px] inline-flex">
+                <router-link to="/dharma" class="w-[170px] h-[120.75px] pl-[7px] pr-1.5 flex-col justify-center items-center gap-[12.75px] inline-flex">
                     <div class="icon w-[90px] h-[90px] relative">
                         <div class="w-[90px] h-[90px] left-0 top-0 absolute bg-[#063D63] rounded-full"></div>
                         <img class="w-[46px] h-[46px] left-[20px] top-[22px] absolute" src="../assets/icon_dharmawanita.png" />
                     </div>
                     <div class="text-center text-[#063D63] text-[15px] font-semibold">DHARMA WANITA</div>
-                </div>
+                </router-link> 
 
                 <div class="w-[90px] h-[122px] flex-col justify-center items-end gap-3.5 inline-flex">
                     <div class="icon w-[90px] h-[90px] relative">
