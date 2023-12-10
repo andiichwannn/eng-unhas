@@ -6,8 +6,8 @@
     </div>
   </div>
   
-  <div class="text-2xl font-bold text-center mt-12">PENGURUS DHARMA WANITA FT-UH 2022/2026</div>
-  <div class="flex justify-center pt-6 gap-8">
+  <div class="text-2xl font-bold text-center mt-12 mb-4">PENGURUS DHARMA WANITA FT-UH 2022/2026</div>
+  <div class="flex justify-center pt-6 gap-8 bg-gradient-to-r from-[#063d63]/80 to-[#063d63]" style="padding: 24px 124px;">
     <div class="" style="width: 720px; height: 360px">
         <img
           src="../assets/darma1.png"
@@ -15,10 +15,7 @@
           class="rounded-xl w-full h-full"
         />
       </div>
-      <p
-        class="text-black pt-8"
-        style="font-weight: 700"
-      >
+      <p class="text-white pt-8 font-semibold">
         Ny. Muralia Isran Ramli (Ketua)<br />
         Ny. Sri Muliani Amil Ilham (Wakil Ketua I)<br />
         Ny. Fauziah Rusman (Wakil Ketua II)<br />
