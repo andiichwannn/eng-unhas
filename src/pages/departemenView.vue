@@ -10,7 +10,7 @@
     import Footer from '../components/Footer.vue';
 
     export default {
+    components: { Navbar, departemen, Footer },
     name: 'departemenView',
-    components: { Navbar, departemen, Footer }
     }
 </script>
