@@ -1,16 +1,16 @@
 <template>
     <Navbar/>
-    <departemen/>
+    <kalenderAkademik/>
     <Footer/>
 </template>
 
 <script>
     import Navbar from '../components/navbar.vue';
-    import departemen from '../components/departemen.vue';
+    import kalenderAkademik from '../components/kalenderAkademik.vue';
     import Footer from '../components/Footer.vue';
 
     export default {
-    name: 'departemenView',
-    components: { Navbar, departemen, Footer }
+    name: 'kalenderAkademikView',
+    components: { Navbar, kalenderAkademik, Footer }
     }
 </script>
