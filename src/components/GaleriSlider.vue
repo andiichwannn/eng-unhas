@@ -1,60 +1,34 @@
 <template>
-<div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img src="../static/galeri/1.png" class="w-full" />
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" class="btn btn-circle">❮</a> 
-      <a href="#slide2" class="btn btn-circle">❯</a>
+  <section class="Galeri px-16" style="padding: 24px 128px;">
+    <div class="flex gap-4">
+        <h1 class="text-4xl font-semibold" style="color: #063D63;">GALERI</h1>
+        <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
     </div>
-  </div> 
-  <div id="slide2" class="carousel-item relative w-full">
-    <img src="../static/galeri/1.png" class="w-full" />
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" class="btn btn-circle">❮</a> 
-      <a href="#slide3" class="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" class="carousel-item relative w-full">
-    <img src="../static/galeri/1.png" class="w-full" />
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" class="btn btn-circle">❮</a> 
-      <a href="#slide4" class="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide4" class="carousel-item relative w-full">
-    <img src="../static/galeri/1.png" class="w-full" />
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" class="btn btn-circle">❮</a> 
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'SliderTwo',
-    data() {
-      return {
-        currentSlide: 1,
-      }
-    },
-    methods: {
-      prev() {
-        if (this.currentSlide > 1) {
-          this.currentSlide--
-        } else {
-          this.currentSlide = 5
-        }
-      },
-      next() {
-        if (this.currentSlide === 5) {
-          this.currentSlide = 1
-        } else {
-          this.currentSlide++
-        }
-      },
-    },
-  }
-  
-  </script>
+    <div class="flex px-4 gap-2">
+        <div>
+            <img src="../assets/panah kiri.png" alt="" class="py-14 px-3 my-10">
+        </div>
+        <div>
+            <img src="../assets/Galeri1.png" alt="" class="py-6 mx-3">
+            <h1 class="text-center font-semibold">Pengabdian Masyarakat</h1>
+        </div>
+        <div>
+            <img src="../assets/Galeri2.png" alt="" class="py-6 mx-3">
+            <h1 class="text-center font-semibold">Rapat Kerja Fakultas Teknik</h1>
+        </div>
+        <div>
+            <img src="../assets/Galeri3.png" alt="" class="py-6 mx-3">
+            <h1 class="text-center font-semibold">Pelantikan dan Pengabdian Sumpah Jabatan Pejabat</h1>
+        </div>
+        <div>
+            <img src="../assets/panah kanan.png" alt="" class="py-14 px-3 my-10">
+        </div>
+    </div>                
+  </section>
+</template>
+
+<script>
+export default{
+    name: 'GaleriSlider'
+}
+</script>
