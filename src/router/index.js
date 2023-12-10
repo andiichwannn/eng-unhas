@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../pages/HomeView.vue";
 import DharmaView from "../pages/DharmaView.vue";
 import departemenView from "../pages/departemenView.vue";
+import kalenderAkademikView from "../pages/kalenderAkademikView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
       path: "/departemenView",
       name: "departemenView",
       component: departemenView
+    },
+    {
+      path: "/kalenderAkademikView",
+      name: "kalenderAkademikView",
+      component: kalenderAkademikView
     }
   ],
 });

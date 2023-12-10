@@ -26,13 +26,13 @@
                     <div class="text-center text-[#063D63] text-[15px] font-semibold">AKREDITASI</div>
                 </div>
 
-                <div class="w-[170px] h-[122px] flex-col justify-center items-center gap-3.5 inline-flex">
+                <router-link to="/kalenderAkademikView" class="w-[170px] h-[122px] flex-col justify-center items-center gap-3.5 inline-flex">
                     <div class="icon w-[90px] h-[90px] relative">
                         <div class="w-[90px] h-[90px] left-0 top-0 absolute bg-[#063D63] rounded-full"></div>
                         <img class="w-[41px] h-[41px] left-[25px] top-[25px] absolute" src="../assets/icon_kalender.png" />
                     </div>
                     <div class="text-center text-[#063D63] text-[15px] font-semibold">KALENDER AKADEMIK</div>
-                </div>
+                </router-link>
             </div>
         </div>
         <div class="justify-center flex mt-12">
