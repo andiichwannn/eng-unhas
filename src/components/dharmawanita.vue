@@ -6,9 +6,10 @@
     </div>
   </div>
   
-  <div class="text-2xl font-bold text-center mt-12 mb-4">PENGURUS DHARMA WANITA FT-UH 2022/2026</div>
-  <div class="flex justify-center pt-6 gap-8 bg-gradient-to-r from-[#063d63]/80 to-[#063d63]" style="padding: 24px 124px;">
-    <div class="" style="width: 720px; height: 360px">
+  <div class="py-2 bg-gradient-to-r from-[#063d63]/80 to-[#063d63]">
+    <div class="text-white text-2xl font-bold text-center mt-6 mb-4">PENGURUS DHARMA WANITA FT-UH 2022/2026</div>
+    <div class="flex justify-center pt-6 gap-8" style="padding: 24px 124px;">
+      <div class="" style="width: 720px; height: 360px">
         <img
           src="../assets/darma1.png"
           alt="Dharma Wanita"
@@ -29,7 +30,8 @@
         Ny. Asra Chairul Paotonan (Wakil Bendahara II)<br />
         Ny. Fatmawati Hairul Arsyad (Wk Bendahara III)<br />
       </p>
-    </div>
+    </div>
+  </div>
 
     <div class="text-2xl font-bold text-center mt-12">STRUKTUR ORGANISASI DHARMA WANITA</div>
     <div class="flex justify-center pt-6 gap-8">

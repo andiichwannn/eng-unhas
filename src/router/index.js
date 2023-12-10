@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../pages/HomeView.vue";
 import DharmaView from "../pages/DharmaView.vue";
 import departemenView from "../pages/departemenView.vue";
+import akreditasiView from "../pages/akreditasiView.vue";
 import kalenderAkademikView from "../pages/kalenderAkademikView.vue";
 
 const router = createRouter({
@@ -23,10 +24,15 @@ const router = createRouter({
       component: departemenView
     },
     {
+      path: "/akreditasiView",
+      name: "akreditasiView",
+      component: akreditasiView
+    },
+    {
       path: "/kalenderAkademikView",
       name: "kalenderAkademikView",
       component: kalenderAkademikView
-    }
+    },
   ],
 });
 
