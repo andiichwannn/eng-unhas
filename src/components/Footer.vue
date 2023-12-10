@@ -33,8 +33,8 @@
                     </form>
                     <div class="mt-16 mb-4 text-xl">DIDUKUNG OLEH</div>
                     <div class="flex gap-8 items-center">
-                        <img width="100px" src="../assets/logoUpanaStudio.png" alt="">
-                        <img width="100px" src="../assets/logoOricon.png" alt="">
+                        <img src="../assets/logoUpanaStudio.png" alt="" style="width: 100px;">
+                        <img src="../assets/logoOricon.png" alt="" style="width: 100px;">
                     </div>
                 </div>
             </div>

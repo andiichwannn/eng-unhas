@@ -52,9 +52,7 @@
                 <img class="w-[380px] h-[240px] left-0 top-0 absolute" src="../assets/berita3.png" />
                 <div class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold">Selengkapnya</div>
                 <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
-            </div>
-
-            
+            </div>  
         </div>
     </section>
 </template>
