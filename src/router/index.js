@@ -4,6 +4,8 @@ import DharmaView from "../pages/DharmaView.vue";
 import departemenView from "../pages/departemenView.vue";
 import akreditasiView from "../pages/akreditasiView.vue";
 import kalenderAkademikView from "../pages/kalenderAkademikView.vue";
+import semuaBeritaView from "../pages/semuaBeritaView.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,11 @@ const router = createRouter({
       path: "/kalenderAkademikView",
       name: "kalenderAkademikView",
       component: kalenderAkademikView
+    },
+    {
+      path: "/semuaBeritaView",
+      name: "semuaBeritaView",
+      component: semuaBeritaView
     },
   ],
 });

@@ -5,9 +5,9 @@
                 <h1 class="text-4xl font-semibold" style="color: #063D63;">BERITA</h1>
                 <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
             </div>
-            <div style="margin-top: 10px; text-decoration-line: underline; text-decoration-color: #063D63;">
+            <router-link to="/semuaBeritaView" style="margin-top: 10px; text-decoration-line: underline; text-decoration-color: #063D63;">
                 <a href="#" class="text-base font-medium" style="color: #063D63;">Lihat semua berita -></a>
-            </div>
+            </router-link>
         </div>
         
         <div class="w-100 h-80 relative">
