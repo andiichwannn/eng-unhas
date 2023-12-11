@@ -1,4 +1,4 @@
-<template>
+gi<template>
     <section style="margin-top: 200px; margin-bottom: 64px; padding: 0 124px;">
         <div class="flex items-center justify-between">
             <div class="flex gap-4">
@@ -18,73 +18,21 @@
             </div>
         </div>
         
-        <div class="my-6">
+        <div v-for="item in items" :key="item.id"   class="my-6">
             <div class="w-100 h-80 relative">
                 <div class="w-full h-80 left-0 top-4 absolute bg-gray-50"></div>
-                <div class="left-[500px] top-[40px] absolute text-base text-center text-neutral-500 font-semibold">24 Oktober 2022</div>
+                <div class="left-[500px] top-[40px] absolute  text-neutral-500 font-semibold">24 Oktober 2022</div>
                 <div class="w-200 h-24 left-[500px] top-[134px] absolute justify-center items-center inline-flex">
-                <div class="w-100 h-24 text-justify text-neutral-500 font-normal pr-8">Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. Dekan FT Unhas Bapak Prof. Dr. Eng. Ir. Muhammad Isran Ramli, S.T, M.T. IPM. memberikan sambutan dan sekaligus meresmikan secara simbolis Café Insinyur, Aplikasi M-Berkas, Program Internasionalisasi P2MJKI...</div>
+                <div class="w-100 h-24 text-left text-neutral-500 font-normal pr-8 mt-12" style="margin-top: 70px;">{{ item.IsiBerita}}</div>
             </div>
-            <div class="w-100 h-9 left-[500px] top-[80px] absolute justify-center items-center inline-flex">
-                <div class="text-center text-black text-2xl font-semibold">Puncak Dies Natalis ke-62, FT-UH</div>
+            <div class="w-100 h-9 left-[500px] top-[70px] absolute">
+                <div class=" text-black text-2xl font-semibold">{{ item.JudulBerita }}</div>
             </div>
-                <img class="w-95 h-80 left-0 top-4 absolute" src="../assets/main_berita.png" />
+                <img class="mt-12 ml-4 w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.imgBerita)" />
                 <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
             </div>
             
-            <div class="w-100 h-80 relative mt-6">
-                <div class="w-full h-80 left-0 top-4 absolute bg-gray-50"></div>
-                <div class="left-[500px] top-[40px] absolute text-base text-center text-neutral-500 font-semibold">24 Oktober 2022</div>
-                <div class="w-200 h-24 left-[500px] top-[134px] absolute justify-center items-center inline-flex">
-                <div class="w-100 h-24 text-justify text-neutral-500 font-normal pr-8">Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. Dekan FT Unhas Bapak Prof. Dr. Eng. Ir. Muhammad Isran Ramli, S.T, M.T. IPM. memberikan sambutan dan sekaligus meresmikan secara simbolis Café Insinyur, Aplikasi M-Berkas, Program Internasionalisasi P2MJKI...</div>
-            </div>
-            <div class="w-100 h-9 left-[500px] top-[80px] absolute justify-center items-center inline-flex">
-                <div class="text-center text-black text-2xl font-semibold">Puncak Dies Natalis ke-62, FT-UH</div>
-            </div>
-                <img class="w-95 h-80 left-0 top-4 absolute" src="../assets/main_berita.png" />
-                <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
-            </div>
-
-            <div class="w-100 h-80 relative mt-6">
-                <div class="w-full h-80 left-0 top-4 absolute bg-gray-50"></div>
-                <div class="left-[500px] top-[40px] absolute text-base text-center text-neutral-500 font-semibold">24 Oktober 2022</div>
-                <div class="w-200 h-24 left-[500px] top-[134px] absolute justify-center items-center inline-flex">
-                <div class="w-100 h-24 text-justify text-neutral-500 font-normal pr-8">Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. Dekan FT Unhas Bapak Prof. Dr. Eng. Ir. Muhammad Isran Ramli, S.T, M.T. IPM. memberikan sambutan dan sekaligus meresmikan secara simbolis Café Insinyur, Aplikasi M-Berkas, Program Internasionalisasi P2MJKI...</div>
-            </div>
-            <div class="w-100 h-9 left-[500px] top-[80px] absolute justify-center items-center inline-flex">
-                <div class="text-center text-black text-2xl font-semibold">Puncak Dies Natalis ke-62, FT-UH</div>
-            </div>
-                <img class="w-95 h-80 left-0 top-4 absolute" src="../assets/main_berita.png" />
-                <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
-            </div>
-
-            <div class="w-100 h-80 relative mt-6">
-                <div class="w-full h-80 left-0 top-4 absolute bg-gray-50"></div>
-                <div class="left-[500px] top-[40px] absolute text-base text-center text-neutral-500 font-semibold">24 Oktober 2022</div>
-                <div class="w-200 h-24 left-[500px] top-[134px] absolute justify-center items-center inline-flex">
-                <div class="w-100 h-24 text-justify text-neutral-500 font-normal pr-8">Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. Dekan FT Unhas Bapak Prof. Dr. Eng. Ir. Muhammad Isran Ramli, S.T, M.T. IPM. memberikan sambutan dan sekaligus meresmikan secara simbolis Café Insinyur, Aplikasi M-Berkas, Program Internasionalisasi P2MJKI...</div>
-            </div>
-            <div class="w-100 h-9 left-[500px] top-[80px] absolute justify-center items-center inline-flex">
-                <div class="text-center text-black text-2xl font-semibold">Puncak Dies Natalis ke-62, FT-UH</div>
-            </div>
-                <img class="w-95 h-80 left-0 top-4 absolute" src="../assets/main_berita.png" />
-                <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
-            </div>
-            
-            <div class="w-100 h-80 relative mt-6">
-                <div class="w-full h-80 left-0 top-4 absolute bg-gray-50"></div>
-                <div class="left-[500px] top-[40px] absolute text-base text-center text-neutral-500 font-semibold">24 Oktober 2022</div>
-                <div class="w-200 h-24 left-[500px] top-[134px] absolute justify-center items-center inline-flex">
-                <div class="w-100 h-24 text-justify text-neutral-500 font-normal pr-8">Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. Dekan FT Unhas Bapak Prof. Dr. Eng. Ir. Muhammad Isran Ramli, S.T, M.T. IPM. memberikan sambutan dan sekaligus meresmikan secara simbolis Café Insinyur, Aplikasi M-Berkas, Program Internasionalisasi P2MJKI...</div>
-            </div>
-            <div class="w-100 h-9 left-[500px] top-[80px] absolute justify-center items-center inline-flex">
-                <div class="text-center text-black text-2xl font-semibold">Puncak Dies Natalis ke-62, FT-UH</div>
-            </div>
-                <img class="w-95 h-80 left-0 top-4 absolute" src="../assets/main_berita.png" />
-                <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
-            </div>
         </div>
-
         <div>
             <div class="flex items-center justify-center mt-16 space-x-3">
             <button class="px-3 py-1 bg-[#063d63] rounded-md border-2 border-[#063d63] text-white">1</button>
@@ -99,7 +47,33 @@
 </template>
 
 <script>
+
+import axios from 'axios';
+
 export default {
-    name: "semuaBerita"
-}
+    name: "semuaBerita",
+  data() {
+    return {
+      items: [],
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/AllBerita'; 
+
+    axios.get(apiUrl)
+    .then(response => {
+      this.items = response.data.data; // Adjust the property name based on your API response
+    })
+    .catch(error => {
+      console.error('Error fetching data from Directus:', error);
+    });
+  },
+  methods: {
+    getImageUrl(imageId) {
+      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+      return `http://0.0.0.0:8055/assets/${imageId}`;
+    },
+  },
+};
 </script>
