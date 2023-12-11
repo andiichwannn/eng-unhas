@@ -1,34 +1,51 @@
 <template>
   <section class="Galeri px-16" style="padding: 24px 128px;">
-    <div class="flex gap-4">
-        <h1 class="text-4xl font-semibold" style="color: #063D63;">GALERI</h1>
-        <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
-    </div>
-    <div class="flex px-4 gap-2">
-        <div>
-            <img src="../assets/panah kiri.png" alt="" class="py-14 px-3 my-10">
-        </div>
-        <div>
-            <img src="../assets/Galeri1.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Pengabdian Masyarakat</h1>
-        </div>
-        <div>
-            <img src="../assets/Galeri2.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Rapat Kerja Fakultas Teknik</h1>
-        </div>
-        <div>
-            <img src="../assets/Galeri3.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Pelantikan dan Pengabdian Sumpah Jabatan Pejabat</h1>
-        </div>
-        <div>
-            <img src="../assets/panah kanan.png" alt="" class="py-14 px-3 my-10">
-        </div>
-    </div>                
+    <swiper :options="swiperOptions">
+    <swiper-slide v-for="item in galleryItems" :key="item.id">
+      <div class="bg-gray-200 p-4 rounded-lg">
+        <img class="w-[380px] h-[240px] mb-4 " :src="getImageUrl(item.galeriImg)" alt="Slide Image">
+        <h3 class="text-xl font-semibold">{{ item.tittle }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </swiper-slide>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </swiper>           
   </section>
 </template>
 
 <script>
-export default{
-    name: 'GaleriSlider'
-}
+import axios from 'axios';
+
+export default {
+    name: 'GaleriSlider',
+  data() {
+    return {
+      galleryItems: [],
+      swiperOptions: {
+        // Add swiper options here if needed
+      },
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/galeri';
+
+    axios.get(apiUrl)
+      .then(response => {
+        this.galleryItems = response.data.data;
+      })
+      .catch(error => {
+        console.error('Error fetching gallery items from Directus:', error);
+      });
+  },
+  methods: {
+      getImageUrl(imageId) {
+        // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+        return `http://0.0.0.0:8055/assets/${imageId}`;
+      },
+    },
+};
+
 </script>

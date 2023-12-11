@@ -29,7 +29,7 @@ gi<template>
                 <div class=" text-black text-2xl font-semibold">{{ item.JudulBerita }}</div>
             </div>
                 <img class="mt-12 ml-4 w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.imgBerita)" />
-                <div class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</div>
+                <a href="/beritaDetails" class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</a>
             </div>
             
         </div>

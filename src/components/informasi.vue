@@ -18,32 +18,11 @@
             </router-link>
         </div>
         <div class="grid grid-cols-2 gap-y-8 items-center mt-8">
-            <div class="h-24 py-2 px-8 mx-4" style="background-color: #f4f4f4;">
-                <h1 class="text-sm max-w-lg font-semibold">THE 3RD EPI INTERNATIONAL CONFERENCE ON SCIENCE AND ENGINEERING 2019</h1>
+            <div v-for="item in items" :key="item.id" class="h-24 py-2 px-8 mx-4" style="background-color: #f4f4f4;">
+                <h1 class="text-sm max-w-lg font-semibold">{{ item.Judul }}</h1>
                 <div class="flex pt-5">
                     <img src="../assets/kalender.png" alt="">
-                    <p class="text-xs" style="padding: 2px 0 0 8px;">23 September 2019</p>
-                </div>
-            </div>
-            <div class="h-24 py-4 px-8 mx-4" style="background-color: #f4f4f4;">
-                <h1 class="text-sm max-w-lg font-semibold">WORKSHOP & SIMPOSIUM NASIONAL GEOMEKANIKA 5 2019</h1>
-                <div class="flex pt-5">
-                    <img src="../assets/kalender.png" alt="">
-                    <p class="text-xs" style="padding: 2px 0 0 8px;">06 Agustus 2019</p>
-                </div>
-            </div>
-            <div class="h-24 py-4 px-8 mx-4" style="background-color: #f4f4f4;"> 
-                <h1 class="text-sm max-w-lg font-semibold">Pengembangan Karakter Mahasiswa Baru 2019 Fakultas Teknik Unhas</h1>
-                <div class="flex pt-5">
-                    <img src="../assets/kalender.png" alt="">
-                    <p class="text-xs" style="padding: 2px 0 0 8px;">09 Juli 2019</p>
-                </div>
-            </div>
-            <div class="h-24 py-4 px-8 mx-4" style="background-color: #f4f4f4;">
-                <h1 class="text-sm max-w-lg font-semibold">International Guest Lecture on Journal Article</h1>
-                <div class="flex pt-5">
-                    <img src="../assets/kalender.png" alt="">
-                    <p class="text-xs" style="padding: 2px 0 0 8px;">25 Juni 2019</p>
+                    <p class="text-xs" style="padding: 2px 0 0 8px;">{{ item.tanggalInformasi }}</p>
                 </div>
             </div>
         </div>
@@ -51,7 +30,29 @@
 </template>
 
 <script>
-export default{
-    name: 'informasi'
-}
+ import axios from 'axios';
+  export default {
+      name: "informasi",
+    data() {
+      return {
+        items: [],
+        firtsData: [],
+      };
+  
+    },
+  
+    mounted() {
+      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+      const apiUrl = 'http://0.0.0.0:8055/items/Informasi'; 
+  
+      axios.get(apiUrl)
+      .then(response => {
+        this.items = response.data.data; // Adjust the property name based on your API response
+        this.firtsData = response.data.data[0]
+      })
+      .catch(error => {
+        console.error('Error fetching data from Directus:', error);
+      });
+    },
+  };
 </script>
