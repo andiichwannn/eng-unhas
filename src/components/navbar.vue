@@ -29,7 +29,7 @@
             <div class="navbar-nav space-x-24 text-sm font-semibold" style="padding: auto; margin: auto; display: flex; align-items: center; justify-content: space-between;">
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">PROFIL</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#ED2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">BERITA</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">SEJARAH SINGKAT</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">VISI, MISI DAN SASARAN</a>
@@ -43,7 +43,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">SUMBER DAYA</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">GURU BESAR</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">TENAGA KEPENDIDIKAN</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">SARANA DAN PRASARANA</a>
@@ -53,7 +53,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">KEMAHASISWAAN</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">UPT ASRAMA (RAMTEK)</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PENGEMBANGAN KARAKTER MAHASISWA</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PENINGKATAN PRESTASI MAHASISWA</a>
@@ -66,7 +66,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">RISET DAN INOVASI</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">DAFTAR PENELITIAN LBE TAHUN 2020</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">HASIL INOVASI</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">HAK KEKAYAAN INTELEKTUAL</a>
@@ -75,7 +75,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">KEMITRAAN</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">KERJASAMA DALAM NEGERI</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">KERJASAMA LUAR NEGERI</a>
                     </div>
@@ -83,7 +83,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">GPM-PR</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PROFIL GPM-PR</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">DOKUMEN MUTU</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">AUDIT MUTU AKADEMIK INTERNAL</a>
@@ -97,7 +97,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">COT</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">COT WEBSITE</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">JURNAL COT</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">COT NEWSLETTER</a>

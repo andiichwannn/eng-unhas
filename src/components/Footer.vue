@@ -28,8 +28,8 @@
                 <div>
                     <div class="text-xl">PENELUSURAN OLEH GOOGLE</div>
                     <form class="mt-4 bg-white flex justify-between items-center border border-gray-300 rounded-lg overflow-hidden" action="https:www.google.com/search" method="GET">
-                        <input type="text" name="q" class="text-black p-4 w-full" placeholder="Google Search">
-                        <input type="submit" value="Cari" class="px-6 py-4 bg-black text-white hover:bg-[#063d63]/90 focus:outline-none">
+                        <input type="text" name="q" class="text-black p-3 w-full" placeholder="Google Search">
+                        <input type="submit" value="Cari" class="px-6 py-3 bg-black text-white hover:bg-[#063d63]/90 focus:outline-none">
                     </form>
                     <div class="mt-16 mb-4 text-xl">DIDUKUNG OLEH</div>
                     <div class="flex gap-8 items-center">

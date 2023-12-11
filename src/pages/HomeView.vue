@@ -3,7 +3,9 @@
   
   <body>
     <Hero/>
-    <message/>
+    <div class="fixed bottom-8 right-8">
+      <message/>
+    </div>
     <activity/>
     <Sambutan/>
     <GaleriSlider/>
