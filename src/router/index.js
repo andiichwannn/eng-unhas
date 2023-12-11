@@ -5,6 +5,7 @@ import departemenView from "../pages/departemenView.vue";
 import akreditasiView from "../pages/akreditasiView.vue";
 import kalenderAkademikView from "../pages/kalenderAkademikView.vue";
 import semuaBeritaView from "../pages/semuaBeritaView.vue";
+import semuaInformasiView from "../pages/semuaInformasiView.vue";
 
 
 const router = createRouter({
@@ -39,6 +40,16 @@ const router = createRouter({
       path: "/semuaBeritaView",
       name: "semuaBeritaView",
       component: semuaBeritaView
+    },
+    {
+      path: "/semuaBeritaView",
+      name: "semuaBeritaView",
+      component: semuaBeritaView
+    },
+    {
+      path: "/semuaInformasiView",
+      name: "semuaInformasiView",
+      component: semuaInformasiView
     },
   ],
 });
