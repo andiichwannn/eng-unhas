@@ -44,7 +44,7 @@
 
     <div class="">
       <div class="text-2xl font-bold text-center mt-12">GALERI DHARMA WANITA</div>
-      <div class="flex flex-col gap-6 px-24 my-8">
+      <div class="flex flex-col gap-6 px-24 my-8 items-center">
       <div class="frame flex gap-6">
         <div class="div flex flex-col items-center">
           <img class="image h-64 w-96 object-cover" alt="Image" src="../assets/galeridarma1.png" />

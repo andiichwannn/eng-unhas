@@ -4,10 +4,25 @@
             <a href="https://eng.unhas.ac.id/fakultas/" class="site-logo">
                 <img src="../assets/unhas_id.png" alt="">
             </a>
-            <form class="p-1 flex justify-center gap-6 h-10 w-[320px] rounded-3xl" style="background-color: #063556" action="" method="GET">
-                <input type="text" name="q" class="text-white" style="background-color: #063556" placeholder="Cari disini...">
-                <input type="submit" value="Cari" class="px-8 text-white">
-            </form>
+            <div class="flex gap-6 mr-12 px-6">
+                <div class="flex items-center gap-8">
+                    <form class="p-1 flex justify-center gap-6 h-10 w-[320px] rounded-3xl" style="background-color: #063556" action="" method="GET">
+                        <input type="text" name="q" class="text-white w-full px-2" style="background-color: #063556; border-radius: 64px 0 0 64px;" placeholder="Cari disini...">
+                        <input type="submit" value="Cari" class="justify-center pr-6 text-white">
+                    </form>
+                </div>
+                <div class="flex gap-4 w-8 items-center">
+                    <button class="flex items-center gap-2 text-white">
+                        <img src="../assets/indonesiaFlag.png" alt="" class="">
+                        <div class="">IND</div>
+                    </button>
+                    <div class="text-white font-bold pl-6">|</div>
+                    <button class="flex items-center gap-2 text-gray-400 hover:text-white">
+                        <img src="../assets/englishFlag.png" alt="" class="">
+                        <div class="">ENG</div>
+                    </button>
+                </div>
+            </div>
         </div>
         
         <nav class="navbar" style="margin-top: 24px; padding: 14px 128px; background-color: #eb2629; align-items: center; color: white;"> 
