@@ -24,13 +24,14 @@
         </div>
 
         <div class="flex justify-between">
-            <div v-for="item in items" :key="item.id"   class="w-96 h-96 mt-10 relative">
+            <div v-for="item in items" :key="item.id"  class="w-96 h-96 mt-10 relative">
                 <div class="w-[380px] h-[420px] absolute bg-gray-50"></div>
                 <div class="w-[320px] h-[120px] left-[16px] top-[248px] absolute justify-center items-center inline-flex">
                     <div class="w-[320px] h-[120px] text-black font-semibold">{{ item.Judul }}</div>
                 </div>
-                <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="'assets/img_Berita/' + item.gambar"/>
-                <a class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold" href="">Selengkapnya</a>
+                <!-- <img class="w-[380px] h-[240px] left-0 top-0 absolute" src="http://0.0.0.0:8055/assets/25a7941c-4543-4391-9291-98ac10adc6e2" alt="..."/> -->
+                <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.img)" :alt="item.Judul" />
+                <div class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold">Selengkapnya</div>
                 <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
             </div>
         </div>
@@ -58,6 +59,12 @@ export default {
     .catch(error => {
       console.error('Error fetching data from Directus:', error);
     });
+  },
+  methods: {
+    getImageUrl(imageId) {
+      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+      return `http://0.0.0.0:8055/assets/${imageId}`;
+    },
   },
 };
 
