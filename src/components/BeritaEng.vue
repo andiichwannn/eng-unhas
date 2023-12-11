@@ -24,41 +24,50 @@
         </div>
 
         <div class="flex justify-between">
-            <div class="w-96 h-96 mt-10 relative">
+            <div v-for="item in items" :key="item.id"   class="w-96 h-96 mt-10 relative">
                 <div class="w-[380px] h-[420px] absolute bg-gray-50"></div>
                 <div class="w-[320px] h-[120px] left-[16px] top-[248px] absolute justify-center items-center inline-flex">
-                    <div class="w-[320px] h-[120px] text-black font-semibold">Kunjungan Kerja Fakultas Sipil dan Perencanaan Universitas Balikpapan Dalam Rangka Studi Banding Tinjauan Kurikulum Pendidikan</div>
+                    <div class="w-[320px] h-[120px] text-black font-semibold">{{ item.Judul }}</div>
                 </div>
-                <img class="w-[380px] h-[240px] left-0 top-0 absolute" src="../assets/berita1.png" />
-                <div class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold">Selengkapnya</div>
+                <!-- <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="'assets/img_Berita/' + item.gambar"/> -->
+                <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.img)" :alt="item.title" />
+                <a class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold" href="">Selengkapnya</a>
                 <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
             </div>
 
-            <div class="w-96 h-96 mt-10 relative">
-                <div class="w-[380px] h-[420px] absolute bg-gray-50"></div>
-                <div class="w-[320px] h-[120px] left-[16px] top-[248px] absolute justify-center items-center inline-flex">
-                    <div class="w-[320px] h-[120px] text-black font-semibold">Kerjasama Penyelenggaraan PS PPI Antara Fakultas Teknik Universitas Hasanuddin dengan Fakultas Teknik Universitas Halu Oleo</div>
-                </div>
-                <img class="w-[380px] h-[240px] left-0 top-0 absolute" src="../assets/berita2.png" />
-                <div class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold">Selengkapnya</div>
-                <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
-            </div>
-
-            <div class="w-96 h-96 mt-10 relative">
-                <div class="w-[380px] h-[420px] absolute bg-gray-50"></div>
-                <div class="w-[320px] h-[120px] left-[16px] top-[248px] absolute justify-center items-center inline-flex">
-                    <div class="w-[320px] h-[120px] text-black font-semibold">Kunjungan Kerja Tim FT - Universitas Tanjungpura</div>
-                </div>
-                <img class="w-[380px] h-[240px] left-0 top-0 absolute" src="../assets/berita3.png" />
-                <div class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold">Selengkapnya</div>
-                <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
-            </div>  
+            
         </div>
     </section>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: "BeritaEng"
-}
+    name: "BeritaEng",
+  data() {
+    return {
+      items: [],
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/beritaWeb'; 
+
+    axios.get(apiUrl)
+    .then(response => {
+      this.items = response.data.data; // Adjust the property name based on your API response
+    })
+    .catch(error => {
+      console.error('Error fetching data from Directus:', error);
+    });
+  },
+  methods: {
+    getImageUrl(imageId) {
+      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+      return `http://0.0.0.0:8055/assets/${imageId}`;
+    },
+  },
+};
+
 </script>
