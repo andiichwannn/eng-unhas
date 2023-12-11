@@ -1,12 +1,20 @@
 <template>
   <section class="Berita px-16 mt-8" style="padding: 24px 128px;">
-        <div class="flex justify-between">
+        <div class="flex justify-between items-center">
             <div class="flex gap-4">
                 <h1 class="text-4xl font-semibold" style="color: #063D63;">BERITA</h1>
                 <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
             </div>
-            <router-link to="/semuaBeritaView" style="margin-top: 10px; text-decoration-line: underline; text-decoration-color: #063D63;">
-                <a href="#" class="text-base font-medium" style="color: #063D63;">Lihat semua berita -></a>
+            <router-link to="/semuaBeritaView" class="items-center p-2">
+                <div class="flex items-center mx-2 my-1 justify-between text-[#063d63] font-medium hover:text-[#063d63]/75 gap-2">
+                    <a href="#">
+                        <p class="text-base">
+                        Lihat Semua Berita
+                        </p>
+                    </a>
+                    <div class="">></div>
+                </div>
+                <div class="w-full bg-[#063d63] h-0.5"></div>
             </router-link>
         </div>
         
