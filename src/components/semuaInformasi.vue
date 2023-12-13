@@ -64,7 +64,7 @@
     },
     methods:{
         getImageId(imageId) {
-        // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+        // Replace 'http://your-directus-url' with the actual URL of your Directus eeinstance
         return `http://0.0.0.0:8055/assets/${imageId}`;
     },
     }
