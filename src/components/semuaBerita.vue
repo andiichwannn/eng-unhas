@@ -33,15 +33,15 @@ gi<template>
             </div>
             
         </div>
-        <div>
-            <div class="flex items-center justify-center mt-16 space-x-3">
+
+        
+        <div class="flex items-center justify-center mt-16 space-x-3">
             <button class="px-3 py-1 bg-[#063d63] rounded-md border-2 border-[#063d63] text-white">1</button>
             <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">2</button>
             <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">3</button>
             <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">4</button>
             <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">...</button>
             <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">9</button>
-        </div>
         </div>
     </section>
 </template>

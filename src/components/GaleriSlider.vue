@@ -1,19 +1,6 @@
 <template>
   <section class="Galeri px-16" style="padding: 24px 128px;">
-    <!-- <swiper :options="swiperOptions">
-    <swiper-slide v-for="item in galleryItems" :key="item.id">
-      <div class="bg-gray-200 p-4 rounded-lg">
-        <img class="w-[380px] h-[240px] mb-4 " :src="getImageUrl(item.galeriImg)" alt="Slide Image">
-      </div>
-    </swiper-slide>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </swiper>  -->
-  <div class="flex gap-4">
-    <h1 class="text-4xl font-bold text-center" style="color: #063D63;">GALERI</h1>
-</div>
-<div className="carousel carousel-center p-4 space-x-3  rounded-box">
+    <div className="carousel carousel-center p-4 space-x-3  rounded-box">
   <div v-for="item in galleryItems" :key="item.id" className="carousel-item">
     <!-- <img :src="getImageUrl(item.galeriImg)" className="rounded-box "  style="width: 50rem; height: 30rem;"/> -->
     <div class="card flex relative overflow-hidden">
@@ -23,7 +10,7 @@
             </div>
         </div> 
   </div> 
-</div>      
+</div>            
   </section>
 </template>
 
