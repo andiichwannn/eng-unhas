@@ -3,13 +3,13 @@
     <section class="Berita px-16 mt-40" style="padding: 24px 128px;">
         <div class="flex justify-between gap-16">
             <div>
-                <h1 class="text-3xl text-black font-semibold">Puncak Dies Natalis Ke-62, FT-UH</h1>
+                <h1 class="text-3xl text-black font-semibold">{{ items.JudulBerita }}</h1>
                 <div class="flex gap-2 my-3">
                     <img src="../assets/kalender.png" alt="">
                     <p class="text-sm">24 Oktober 2022</p>
                 </div>
-                <div>
-                    <img src="../assets/main_berita.png" alt="" class="w-full">
+                <div >
+                    <img :src="getImageUrl(items.imgBerita)" alt="" class="w-full">
                     <div class="text-black text-base text-justify mt-4 font-medium">
                         <div>Acara puncak Dies Natalis ke-62 FT Unhas dihadiri oleh Rektor Unhas, Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. para wakil Rektor, Dekan, Direktur, dan jajaran pimpinan Unhas. Juga hadir beberapa tamu undangan, baik dari alumni, mitra-mitra FT Unhas, dan pemerintah setempat. </div>
                         <div class="pt-4">Café insinyur merupakan salah satu program kewirausahaan fakultas Teknik Unhas yang terletak yang didirikan oleh Koperasi Karyawan Fakultas Teknik Unhas. Aplikasi M-Berkas adalah sebuah langkah awal proses transformasi digital Fakultas Teknik Unhas dalam mewujudkan Smart Campus. M-Berkas 1.0 merupakan aplikasi manajemen persuratan akademik berbasis digital sebagai upaya pengurangan penggunaan kertas (paperless). P2MJKI adalah Program Peningkatan dan Pengembangan Model Jejaring Kemitraan Internasional sivitas akademika Fakultas Teknik dalam mewujudkan target capaian World Class University Unhas. Techomart merupakan salah satu unit usaha yang didirikan oleh Koperasi Karyawan Fakultas Teknik Unhas. Gedung sport center saat ini akan memasuki tahap finishing dan akan difungsikan pada awal tahun 2023.</div>
@@ -115,11 +115,36 @@
 <script>
     import Navbar from './navbar.vue';
     import Footer from './Footer.vue';
+    import axios from 'axios';
 
     export default {
         name: 'beritaDetails',
-        components: { Navbar, Footer }
+        components: { Navbar, Footer },
+        data() {
+    return {
+      items: [],
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/AllBerita/'+ this.$route.params.id ; 
+
+    axios.get(apiUrl)
+    .then(response => {
+      this.items = response.data.data; // Adjust the property name based on your API response
+    })
+    .catch(error => {
+      console.error('Error fetching data from Directus:', error);
+    });
+  },
+  methods: {
+    getImageUrl(imageId) {
+      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+      return `http://0.0.0.0:8055/assets/${imageId}`;
+    },
+  },
     }
+    
 </script>
 
 <style>

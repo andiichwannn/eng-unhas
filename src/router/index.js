@@ -24,74 +24,74 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path :"/dharma",
+      path: "/dharma",
       name: "dharma",
-      component: DharmaView
+      component: DharmaView,
     },
     {
       path: "/departemenView",
       name: "departemenView",
-      component: departemenView
+      component: departemenView,
     },
     {
       path: "/akreditasiView",
       name: "akreditasiView",
-      component: akreditasiView
+      component: akreditasiView,
     },
     {
       path: "/kalenderAkademikView",
       name: "kalenderAkademikView",
-      component: kalenderAkademikView
+      component: kalenderAkademikView,
     },
     {
       path: "/semuaBeritaView",
       name: "semuaBeritaView",
-      component: semuaBeritaView
+      component: semuaBeritaView,
     },
     {
-      path: "/beritaDetails",
+      path: "/beritaDetails/:id",
       name: "beritaDetails",
-      component: beritaDetails
+      component: beritaDetails,
     },
     {
       path: "/semuaInformasiView",
       name: "semuaInformasiView",
-      component: semuaInformasiView
+      component: semuaInformasiView,
     },
     {
       path: "/sejarahSingkatView",
       name: "sejarahSingkatView",
-      component: sejarahSingkatView
+      component: sejarahSingkatView,
     },
     {
       path: "/visiMisiView",
       name: "visiMisiView",
-      component: visiMisiView
+      component: visiMisiView,
     },
     {
       path: "/manajemenView",
       name: "manajemenView",
-      component: manajemenView
+      component: manajemenView,
     },
     {
       path: "/strukturOrganisasiView",
       name: "strukturOrganisasiView",
-      component: strukturOrganisasiView
+      component: strukturOrganisasiView,
     },
     {
       path: "/masterPlanView",
       name: "masterPlanView",
-      component: masterPlanView
+      component: masterPlanView,
     },
     {
       path: "/petaKampusView",
       name: "petaKampusView",
-      component: petaKampusView
+      component: petaKampusView,
     },
     {
       path: "/mediatekView",
       name: "mediatekView",
-      component: mediatekView
+      component: mediatekView,
     },
   ],
 });

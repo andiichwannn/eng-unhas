@@ -29,7 +29,7 @@ gi<template>
                 <div class=" text-black text-2xl font-semibold">{{ item.JudulBerita }}</div>
             </div>
                 <img class="mt-12 ml-4 w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.imgBerita)" />
-                <a href="/beritaDetails" class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</a>
+                <a :href="getIdBerita(item.id)" class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</a>
             </div>
             
         </div>
@@ -74,6 +74,10 @@ export default {
       // Replace 'http://your-directus-url' with the actual URL of your Directus instance
       return `http://0.0.0.0:8055/assets/${imageId}`;
     },
+    getIdBerita(idBerita){
+        return `http://127.0.0.1:5173/beritaDetails/${idBerita}`;
+    },
+
   },
 };
 </script>

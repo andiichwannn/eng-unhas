@@ -20,7 +20,7 @@
               <div class="text-center text-black text-2xl font-semibold">{{ firtsData.Judul }}</div>
           </div>
               <img class="w-95 h-80 left-0 top-4 absolute" src="http://0.0.0.0:8055/assets/25a7941c-4543-4391-9291-98ac10adc6e2" />
-              <a href="/beritaDetails" class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</a>
+              <a href="" class="w-28 h-5 left-[500px] top-[280px] absolute text-sky-900 font-semibold">Selengkapnya</a>
           </div>
   
           <div class="flex justify-between">
@@ -31,7 +31,7 @@
                   </div>
                   <!-- <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="'assets/img_Berita/' + item.gambar"/> -->
                   <img class="w-[380px] h-[240px] left-0 top-0 absolute" :src="getImageUrl(item.img)" :alt="item.Judul" />
-                  <a class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold" href="/beritaDetails">Selengkapnya</a>
+                  <a class="w-28 h-5 left-[272px] top-[386px] absolute text-sky-900 text-xs font-semibold" href="">Selengkapnya</a>
                   <div class="w-32 h-5 left-[20px] top-[388px] absolute text-neutral-500 text-xs font-semibold">24 Oktober 2022</div>
               </div>
   
