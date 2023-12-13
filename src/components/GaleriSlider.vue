@@ -29,9 +29,38 @@
 </template>
 
 <script>
-export default{
-    name: 'GaleriSlider'
-}
+import axios from 'axios';
+
+export default {
+    name: 'GaleriSlider',
+  data() {
+    return {
+      galleryItems: [],
+      swiperOptions: {
+        // Add swiper options here if needed
+      },
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/galeri';
+
+    axios.get(apiUrl)
+      .then(response => {
+        this.galleryItems = response.data.data;
+      })
+      .catch(error => {
+        console.error('Error fetching gallery items from Directus:', error);
+      });
+  },
+  methods: {
+      getImageUrl(imageId) {
+        // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+        return `http://0.0.0.0:8055/assets/${imageId}`;
+      },
+    },
+};
+
 </script>
 
 <style scoped>

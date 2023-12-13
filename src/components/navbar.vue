@@ -1,10 +1,10 @@
 <template>
     <header class="header-section inset-x-0 top-0" style=" position: fixed; padding: 24px 0 0 0; background-color: #063D63; justify-content: space-between; align-items: center; z-index: 99;">
-        <div class="container flex justify-between" style="padding: 0 128px;">
-            <a href="https://eng.unhas.ac.id/fakultas/" class="site-logo">
+        <div class="container flex justify-between ml-12" style="padding: 0 128px;">
+            <a href="/" class="site-logo mr-10">
                 <img src="../assets/unhas_id.png" alt="">
             </a>
-            <div class="flex gap-6 mr-12 px-6">
+            <div class="flex gap-6 ">
                 <div class="flex items-center gap-8">
                     <form class="p-1 flex justify-center gap-6 h-10 w-[320px] rounded-3xl" style="background-color: #063556" action="" method="GET">
                         <input type="text" name="q" class="text-white w-full px-2" style="background-color: #063556; border-radius: 64px 0 0 64px;" placeholder="Cari disini...">
@@ -29,21 +29,21 @@
             <div class="navbar-nav space-x-24 text-sm font-semibold" style="padding: auto; margin: auto; display: flex; align-items: center; justify-content: space-between;">
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">PROFIL</button>
-                    <div class="dropdown-menu hidden absolute bg-[#ED2629] text-white font-medium w-max -translate-x-4">
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">BERITA</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">SEJARAH SINGKAT</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">VISI, MISI DAN SASARAN</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">MANAJEMEN</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">STRUKTUR ORGANISASI</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">MASTER PLAN</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PETA KAMPUS</a>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">MEDIATEK</a>
+                    <div  class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
+                        <a :href="Berita(data1.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">BERITA</a>
+                        <a :href="Berita(data2.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">SEJARAH SINGKAT</a>
+                        <a :href="Berita(data3.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">VISI, MISI DAN SASARAN</a>
+                        <a :href="Berita(data4.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">MANAJEMEN</a>
+                        <a :href="Berita(data5.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">STRUKTUR ORGANISASI</a>
+                        <a :href="Berita(data6.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">MASTER PLAN</a>
+                        <a :href="Berita(data7.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">PETA KAMPUS</a>
+                        <a :href="Berita(data8.Url)" class="block px-4 py-2 hover:bg-[#b11e28]">MEDIATEK</a>
                     </div>
                 </div>
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">SUMBER DAYA</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">GURU BESAR</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">TENAGA KEPENDIDIKAN</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">SARANA DAN PRASARANA</a>
@@ -53,7 +53,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">KEMAHASISWAAN</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">UPT ASRAMA (RAMTEK)</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PENGEMBANGAN KARAKTER MAHASISWA</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PENINGKATAN PRESTASI MAHASISWA</a>
@@ -66,7 +66,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">RISET DAN INOVASI</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">DAFTAR PENELITIAN LBE TAHUN 2020</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">HASIL INOVASI</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">HAK KEKAYAAN INTELEKTUAL</a>
@@ -75,7 +75,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">KEMITRAAN</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">KERJASAMA DALAM NEGERI</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">KERJASAMA LUAR NEGERI</a>
                     </div>
@@ -83,7 +83,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">GPM-PR</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">PROFIL GPM-PR</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">DOKUMEN MUTU</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">AUDIT MUTU AKADEMIK INTERNAL</a>
@@ -97,7 +97,7 @@
 
                 <div class="dropdown relative inline-block">
                     <button class="dropdown-button text-white transition duration-300 ease-in-out">COT</button>
-                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max -translate-x-4">
+                    <div class="dropdown-menu hidden absolute bg-[#EB2629] text-white font-medium w-max">
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">COT WEBSITE</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">JURNAL COT</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#b11e28]">COT NEWSLETTER</a>
@@ -110,9 +110,50 @@
 </template>
 
 <script>
-export default{
-    name: 'navbar'
-}
+
+import axios from 'axios';
+export default {
+    name: "navbar",
+  data() {
+    return {
+      profiles: [],
+      data1: [],
+      data2: [],
+      data3: [],
+      data4: [],
+      data5: [],
+      data6: [],
+      data7: [],
+      data8: [],
+
+    };
+  },
+  mounted() {
+    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
+    const apiUrl = 'http://0.0.0.0:8055/items/Navbar'; 
+
+    axios.get(apiUrl)
+    .then(response => {
+      this.profiles = response.data.data;
+      this.data1 = response.data.data[0];
+      this.data2 = response.data.data[1];
+      this.data3 = response.data.data[2];
+      this.data4 = response.data.data[3];
+      this.data5 = response.data.data[4];
+      this.data6 = response.data.data[5];
+      this.data7 = response.data.data[6];
+      this.data8 = response.data.data[7];
+    })
+    .catch(error => {
+      console.error('Error fetching data from Directus:', error);
+    });
+  },
+  methods:{
+    Berita(urlBerita){
+    return `http://127.0.0.1:5173${urlBerita}`;
+    },
+  }
+};
 </script>
 
 <style scoped>
