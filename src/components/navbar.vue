@@ -1,10 +1,10 @@
 <template>
     <header class="header-section inset-x-0 top-0" style=" position: fixed; padding: 24px 0 0 0; background-color: #063D63; justify-content: space-between; align-items: center; z-index: 99;">
-        <div class="container flex justify-between ml-12" style="padding: 0 128px;">
+        <div class="container flex justify-between" style="padding: 0 128px;">
             <a href="/" class="site-logo mr-10">
                 <img src="../assets/unhas_id.png" alt="">
             </a>
-            <div class="flex gap-6 ">
+            <div class="flex gap-6 mr-24">
                 <div class="flex items-center gap-8">
                     <form class="p-1 flex justify-center gap-6 h-10 w-[320px] rounded-3xl" style="background-color: #063556" action="" method="GET">
                         <input type="text" name="q" class="text-white w-full px-2" style="background-color: #063556; border-radius: 64px 0 0 64px;" placeholder="Cari disini...">
