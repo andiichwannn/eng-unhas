@@ -4,25 +4,26 @@
         <h1 class="text-4xl font-semibold" style="color: #063D63;">GALERI</h1>
         <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
     </div>
-    <div class="flex px-4 gap-2">
-        <div>
-            <img src="../assets/panah kiri.png" alt="" class="py-14 px-3 my-10">
-        </div>
-        <div>
-            <img src="../assets/Galeri1.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Pengabdian Masyarakat</h1>
-        </div>
-        <div>
-            <img src="../assets/Galeri2.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Rapat Kerja Fakultas Teknik</h1>
-        </div>
-        <div>
-            <img src="../assets/Galeri3.png" alt="" class="py-6 mx-3">
-            <h1 class="text-center font-semibold">Pelantikan dan Pengabdian Sumpah Jabatan Pejabat</h1>
-        </div>
-        <div>
-            <img src="../assets/panah kanan.png" alt="" class="py-14 px-3 my-10">
-        </div>
+
+    <div class="container flex w-auto justify-between mx-0 my-auto mt-6">
+        <div class="card flex relative overflow-hidden">
+            <img src="../assets/Galeri1.png" alt="" class="h-full">
+            <div class="title absolute bg-b w-full h-full top-full">
+                <h3 class="relative px-3 text-center font-medium text-white top-40">Pengabdian Masyarakat</h3>
+            </div>
+        </div> 
+        <div class="card flex relative overflow-hidden">
+            <img src="../assets/Galeri2.png" alt="" class="h-full">
+            <div class="title absolute bg-b w-full h-full top-full">
+                <h3 class="relative px-3 text-center font-medium text-white top-40">Rapat Kerja Fakultas Teknik</h3>
+            </div>
+        </div> 
+        <div class="card flex relative overflow-hidden">
+            <img src="../assets/Galeri3.png" alt="" class="h-full">
+            <div class="title absolute bg-b w-full h-full top-full">
+                <h3 class="relative px-3 text-center font-medium text-white top-40">Pelantikan dan Pengabdian Sumpah Jabatan Pejabat</h3>
+            </div>
+        </div> 
     </div>                
   </section>
 </template>
@@ -32,3 +33,26 @@ export default{
     name: 'GaleriSlider'
 }
 </script>
+
+<style scoped>
+
+.title{
+    transition: all .5s ease-in;
+    background-image: linear-gradient(to bottom, rgba(5,5,5,0), rgba(5,5,5,1))
+}
+.card:hover .title {
+    top: 0;
+    transition: all .5s ease-out;
+}
+
+.card img {
+    transform: scale(1);
+    transition: all .3s ease-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    transition: all .3s ease-in;
+}
+
+</style>
