@@ -1,6 +1,9 @@
 <template>
   <section class="Galeri px-16" style="padding: 24px 128px;">
-    <div className="carousel carousel-center p-4 space-x-3  rounded-box">
+    <div class="flex gap-4">
+    <h1 class="text-4xl font-bold text-center" style="color: #063D63;">GALERI</h1>
+</div>
+<div className="carousel carousel-center p-4 space-x-3  rounded-box">
   <div v-for="item in galleryItems" :key="item.id" className="carousel-item">
     <!-- <img :src="getImageUrl(item.galeriImg)" className="rounded-box "  style="width: 50rem; height: 30rem;"/> -->
     <div class="card flex relative overflow-hidden">
@@ -10,7 +13,7 @@
             </div>
         </div> 
   </div> 
-</div>            
+</div>         
   </section>
 </template>
 
