@@ -1,10 +1,10 @@
 <template>
     <header class="header-section inset-x-0 top-0" style=" position: fixed; padding: 24px 0 0 0; background-color: #063D63; justify-content: space-between; align-items: center; z-index: 99;">
-        <div class="container flex justify-between" style="padding: 0 128px;">
-            <a href="/" class="site-logo mr-10">
+        <div class="container flex justify-between" style="padding: 0 200px 0 128px;">
+            <a href="/" class="site-logo">
                 <img src="../assets/unhas_id.png" alt="">
             </a>
-            <div class="flex gap-6 mr-24">
+            <div class="flex gap-6 ">
                 <div class="flex items-center gap-8">
                     <form class="p-1 flex justify-center gap-6 h-10 w-[320px] rounded-3xl" style="background-color: #063556" action="" method="GET">
                         <input type="text" name="q" class="text-white w-full px-2" style="background-color: #063556; border-radius: 64px 0 0 64px;" placeholder="Cari disini...">
@@ -131,7 +131,7 @@ export default {
   },
   mounted() {
     // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-    const apiUrl = 'http://0.0.0.0:8055/items/Navbar'; 
+    const apiUrl = 'http://localhost:8055/items/Navbar'; 
 
     axios.get(apiUrl)
     .then(response => {
@@ -151,7 +151,7 @@ export default {
   },
   methods:{
     Berita(urlBerita){
-    return `http://127.0.0.1:5173${urlBerita}`;
+    return `http://localhost:5173${urlBerita}`;
     },
   }
 };
@@ -166,10 +166,6 @@ export default {
 .header-section img {
     width: 300px;
 }
-
-/* .navbar-nav a:hover {
-    color: #063D63;
-} */
 
 .dropdown:hover .dropdown-menu {
     display: block;

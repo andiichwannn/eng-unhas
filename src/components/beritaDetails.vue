@@ -126,12 +126,11 @@
     };
   },
   mounted() {
-    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-    const apiUrl = 'http://0.0.0.0:8055/items/AllBerita/'+ this.$route.params.id ; 
+    const apiUrl = 'http://localhost:8055/items/AllBerita/'+ this.$route.params.id ; 
 
     axios.get(apiUrl)
     .then(response => {
-      this.items = response.data.data; // Adjust the property name based on your API response
+      this.items = response.data.data; 
     })
     .catch(error => {
       console.error('Error fetching data from Directus:', error);
@@ -139,8 +138,7 @@
   },
   methods: {
     getImageUrl(imageId) {
-      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-      return `http://0.0.0.0:8055/assets/${imageId}`;
+      return `http://localhost:8055/assets/${imageId}`;
     },
   },
     }

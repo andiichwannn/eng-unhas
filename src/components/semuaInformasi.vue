@@ -34,6 +34,15 @@
                 </div>
             </div>
         </div>
+
+        <div class="flex items-center justify-center mt-16 space-x-3">
+            <button class="px-3 py-1 bg-[#063d63] rounded-md border-2 border-[#063d63] text-white">1</button>
+            <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">2</button>
+            <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">3</button>
+            <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">4</button>
+            <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">...</button>
+            <button class="px-3 py-1 bg-transparent hover:bg-blue-100 rounded-md border-2 border-gray-500">9</button>
+        </div>
     </section>
 </template>
 
@@ -51,7 +60,7 @@
   
     mounted() {
       // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-      const apiUrl = 'http://0.0.0.0:8055/items/Informasi'; 
+      const apiUrl = 'http://localhost:8055/items/Informasi'; 
   
       axios.get(apiUrl)
       .then(response => {
@@ -65,7 +74,7 @@
     methods:{
         getImageId(imageId) {
         // Replace 'http://your-directus-url' with the actual URL of your Directus eeinstance
-        return `http://0.0.0.0:8055/assets/${imageId}`;
+        return `http://localhost:8055/assets/${imageId}`;
     },
     }
   };

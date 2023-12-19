@@ -17,10 +17,10 @@
                 <div class="w-full bg-[#063d63] h-0.5"></div>
             </router-link>
         </div>
-        <div class="grid grid-cols-2 gap-y-8 items-center mt-8">
-            <div v-for="item in items" :key="item.id" class="h-24 py-2 px-8 mx-4" style="background-color: #f4f4f4;">
+        <div class="grid grid-cols-2 flex gap-8 items-center mt-8">
+            <div v-for="item in items" :key="item.id" class="h-24 py-3 px-8 flex flex-col justify-between rounded-lg" style="background-color: #f4f4f4;">
                 <h1 class="text-sm max-w-lg font-semibold">{{ item.Judul }}</h1>
-                <div class="flex pt-5">
+                <div class="flex pt-3">
                     <img src="../assets/kalender.png" alt="">
                     <p class="text-xs" style="padding: 2px 0 0 8px;">{{ item.tanggalInformasi }}</p>
                 </div>
@@ -42,12 +42,11 @@
     },
   
     mounted() {
-      // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-      const apiUrl = 'http://0.0.0.0:8055/items/Informasi'; 
+      const apiUrl = 'http://localhost:8055/items/Informasi'; 
   
       axios.get(apiUrl)
       .then(response => {
-        this.items = response.data.data; // Adjust the property name based on your API response
+        this.items = response.data.data; 
         this.firtsData = response.data.data[0]
       })
       .catch(error => {

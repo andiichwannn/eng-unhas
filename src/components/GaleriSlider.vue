@@ -1,19 +1,19 @@
 <template>
   <section class="Galeri px-16" style="padding: 24px 128px;">
     <div class="flex gap-4">
-    <h1 class="text-4xl font-bold text-center" style="color: #063D63;">GALERI</h1>
-</div>
-<div className="carousel carousel-center p-4 space-x-3  rounded-box">
-  <div v-for="item in galleryItems" :key="item.id" className="carousel-item">
-    <!-- <img :src="getImageUrl(item.galeriImg)" className="rounded-box "  style="width: 50rem; height: 30rem;"/> -->
-    <div class="card flex relative overflow-hidden">
-            <img :src="getImageUrl(item.galeriImg)" style="width: 50rem; height: 30rem;" alt="" class="">
-            <div class="title absolute bg-b w-full h-full top-full">
-                <h3 class="relative px-3 text-center font-medium text-white top-40">{{ item.tittle }}</h3>
-            </div>
+        <h1 class="text-4xl font-bold text-center" style="color: #063D63;">GALERI</h1>
+        <img src="../assets/Garis1.png" alt="" style="height: 4px; width: 320px; margin-top: 20px;">
+    </div>
+    <div className="carousel carousel-center p-4 space-x-3 rounded-box">
+        <div v-for="item in galleryItems" :key="item.id" className="carousel-item">
+            <div class="card flex relative overflow-hidden">
+                <img :src="getImageUrl(item.galeriImg)" style="width: 30rem; height: 18rem;" alt="" class="">
+                <div class="title absolute bg-b w-full h-full top-full">
+                    <h3 class="relative px-3 text-center font-medium text-white top-52">{{ item.tittle }}</h3>
+                </div>
+            </div> 
         </div> 
-  </div> 
-</div>         
+    </div>         
   </section>
 </template>
 
@@ -26,13 +26,11 @@ export default {
     return {
       galleryItems: [],
       swiperOptions: {
-        // Add swiper options here if needed
       },
     };
   },
   mounted() {
-    // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-    const apiUrl = 'http://0.0.0.0:8055/items/galeri';
+    const apiUrl = 'http://localhost:8055/items/galeri';
 
     axios.get(apiUrl)
       .then(response => {
@@ -45,7 +43,7 @@ export default {
   methods: {
       getImageUrl(imageId) {
         // Replace 'http://your-directus-url' with the actual URL of your Directus instance
-        return `http://0.0.0.0:8055/assets/${imageId}`;
+        return `http://localhost:8055/assets/${imageId}`;
       },
     },
 };
