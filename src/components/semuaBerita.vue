@@ -1,4 +1,4 @@
-gi<template>
+<template>
     <section style="margin-top: 200px; margin-bottom: 64px; padding: 0 124px;">
         <div class="flex items-center justify-between">
             <div class="flex gap-4">
