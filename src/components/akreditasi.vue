@@ -34,7 +34,7 @@
                 </div>
             </div>
           
-            <div class="mt-8 flex items-center justify-between">
+            <div class="mt-16 flex items-center justify-between">
                 <div class="text-lg font-semibold">Daftar Program Studi di Unit Pengelola Program Studi (UPPS)</div>
                 <div class="flex text-base">
                     <div class="mr-1">Unduh</div>
